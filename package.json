@@ -1,0 +1,23 @@
+{
+  "name": "@silentcastle/keys",
+  "version": "0.0.1",
+  "description": "Key management",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^2.1.2",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.3"
+  },
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=5.10.4"
+  }
+}
