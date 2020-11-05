@@ -23,6 +23,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "checkJs": false,
+    "importHelpers": true,
     "typeRoots": ["types/", "node_modules/@types/"]
   }
 }
