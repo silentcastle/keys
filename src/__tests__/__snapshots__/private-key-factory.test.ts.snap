@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ed25519 generate from bytes 1`] = `
+PrivateKey {
+  "kind": "ed25519",
+}
+`;
+
+exports[`ed25519 generate from string 1`] = `
+PrivateKey {
+  "kind": "ed25519",
+}
+`;
+
+exports[`secp256k1 generate from bytes 1`] = `
+PrivateKey {
+  "kind": "secp256k1",
+}
+`;
+
+exports[`secp256k1 generate from string 1`] = `
+PrivateKey {
+  "kind": "secp256k1",
+}
+`;
