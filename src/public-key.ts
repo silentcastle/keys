@@ -1,7 +1,7 @@
-import { KeyKind } from "./key-kind";
+import { AlgorithmKind } from "./algorithm-kind";
 
 export interface IPublicKey {
-  readonly kind: KeyKind;
+  readonly kind: AlgorithmKind;
   readonly material: Uint8Array;
 }
 

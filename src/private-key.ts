@@ -1,13 +1,13 @@
-import { KeyKind } from "./key-kind";
+import { AlgorithmKind } from "./algorithm-kind";
 import { IPublicKey } from "./public-key";
 
 export interface IPrivateKey {
-  readonly kind: KeyKind;
+  readonly kind: AlgorithmKind;
   publicKey(): Promise<IPublicKey>;
 }
 
 export interface ISigner {
-  kind: KeyKind;
+  kind: AlgorithmKind;
   sign(message: Uint8Array): Promise<Uint8Array>;
 }
 

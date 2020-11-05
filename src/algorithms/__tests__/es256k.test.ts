@@ -1,6 +1,6 @@
 import * as es256k from "../es256k";
 import * as _ from "lodash";
-import { KeyKind } from "../../key-kind";
+import { AlgorithmKind } from "../../algorithm-kind";
 
 const material = new Uint8Array(_.times(32, () => 1));
 const key = new es256k.PrivateKey(material);
@@ -10,7 +10,7 @@ describe("PublicKey", () => {
   test("properties", () => {
     const material = new Uint8Array(_.times(32, () => 1));
     const publicKey = new es256k.PublicKey(material);
-    expect(publicKey.kind).toEqual(KeyKind.es256k);
+    expect(publicKey.kind).toEqual(AlgorithmKind.es256k);
     expect(publicKey.material).toEqual(material);
   });
 
@@ -33,7 +33,7 @@ describe("PublicKey", () => {
 
 describe("PrivateKey", () => {
   test("fields", async () => {
-    expect(key.kind).toEqual(KeyKind.es256k);
+    expect(key.kind).toEqual(AlgorithmKind.es256k);
     const publicKey = await key.publicKey();
     expect(publicKey).toMatchSnapshot();
   });

@@ -1,5 +1,5 @@
 /**
- * Used for exhaustive matching while selecting between [[KeyKind]] variants.
+ * Used for exhaustive matching while selecting between [[AlgorithmKind]] variants.
  */
 export class InvalidKeyKindError extends Error {
   /**
