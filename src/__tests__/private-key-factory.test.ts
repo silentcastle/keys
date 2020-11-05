@@ -7,13 +7,13 @@ const stringSeed = "hello";
 
 describe("secp256k1", () => {
   test("generate from bytes", () => {
-    const privateKey = privateKeyFactory.fromSeed(AlgorithmKind.es256k, bytesSeed);
-    expect(privateKey.kind).toEqual(AlgorithmKind.es256k);
+    const privateKey = privateKeyFactory.fromSeed(AlgorithmKind.secp256k1, bytesSeed);
+    expect(privateKey.kind).toEqual(AlgorithmKind.secp256k1);
     expect(privateKey).toMatchSnapshot()
   });
   test("generate from string", () => {
-    const privateKey = privateKeyFactory.fromSeed(AlgorithmKind.es256k, stringSeed);
-    expect(privateKey.kind).toEqual(AlgorithmKind.es256k);
+    const privateKey = privateKeyFactory.fromSeed(AlgorithmKind.secp256k1, stringSeed);
+    expect(privateKey.kind).toEqual(AlgorithmKind.secp256k1);
     expect(privateKey).toMatchSnapshot()
   });
 });

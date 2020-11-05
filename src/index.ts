@@ -1,10 +1,12 @@
+
+
 export * from "./algorithm-kind";
 export * from "./invalid-key-kind.error";
 export * from "./private-key.factory";
 export * from "./public-key";
 export * from "./private-key";
 
-import * as es256k from "./algorithms/es256k";
+import * as secp256k1 from "./algorithms/secp256k1";
 import * as ed25519 from "./algorithms/ed25519";
 
-export const algorithms = { es256k, ed25519 };
+export const algorithms = { secp256k1, ed25519 };

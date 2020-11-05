@@ -1,16 +1,16 @@
-import * as es256k from "../es256k";
+import * as secp256k1 from "../secp256k1";
 import * as _ from "lodash";
 import { AlgorithmKind } from "../../algorithm-kind";
 
 const material = new Uint8Array(_.times(32, () => 1));
-const key = new es256k.PrivateKey(material);
+const key = new secp256k1.PrivateKey(material);
 const message = new Uint8Array(_.times(32, (n) => n));
 
 describe("PublicKey", () => {
   test("properties", () => {
     const material = new Uint8Array(_.times(32, () => 1));
-    const publicKey = new es256k.PublicKey(material);
-    expect(publicKey.kind).toEqual(AlgorithmKind.es256k);
+    const publicKey = new secp256k1.PublicKey(material);
+    expect(publicKey.kind).toEqual(AlgorithmKind.secp256k1);
     expect(publicKey.material).toEqual(material);
   });
 
@@ -24,7 +24,7 @@ describe("PublicKey", () => {
     await expect(
       publicKey.verify(new Uint8Array(), signature)
     ).resolves.toBeFalsy();
-    const wrongPublicKey = new es256k.PublicKey(new Uint8Array());
+    const wrongPublicKey = new secp256k1.PublicKey(new Uint8Array());
     await expect(
       wrongPublicKey.verify(message, signature)
     ).resolves.toBeFalsy();
@@ -33,7 +33,7 @@ describe("PublicKey", () => {
 
 describe("PrivateKey", () => {
   test("fields", async () => {
-    expect(key.kind).toEqual(AlgorithmKind.es256k);
+    expect(key.kind).toEqual(AlgorithmKind.secp256k1);
     const publicKey = await key.publicKey();
     expect(publicKey).toMatchSnapshot();
   });

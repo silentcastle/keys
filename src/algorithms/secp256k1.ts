@@ -1,15 +1,16 @@
 import * as elliptic from "elliptic";
 import * as sha256 from "@stablelib/sha256";
 import BN from "bn.js";
-import {IPublicKey, ISignatureVerification} from "../public-key";
+import { IPublicKey, ISignatureVerification } from "../public-key";
 import { AlgorithmKind } from "../algorithm-kind";
 import { IPrivateKey, ISigner } from "../private-key";
 import * as uint8arrays from "uint8arrays";
+import { InvalidKeyMaterialError } from "../invalid-key-material.error";
 
 const secp256k1Context = new elliptic.ec("secp256k1");
 
 export class PublicKey implements IPublicKey, ISignatureVerification {
-  readonly kind = AlgorithmKind.es256k;
+  readonly kind = AlgorithmKind.secp256k1;
   constructor(readonly material: Uint8Array) {}
 
   async verify(message: Uint8Array, signature: Uint8Array): Promise<boolean> {
@@ -26,12 +27,18 @@ export class PublicKey implements IPublicKey, ISignatureVerification {
 }
 
 export class PrivateKey implements IPrivateKey, ISigner {
-  readonly kind = AlgorithmKind.es256k;
+  readonly kind = AlgorithmKind.secp256k1;
 
   #keyPair: elliptic.ec.KeyPair;
   #publicKey: Uint8Array;
 
   constructor(material: Uint8Array) {
+    if (material.length !== 32) {
+      throw new InvalidKeyMaterialError(
+        AlgorithmKind.secp256k1,
+        `Expect private key material to be 32 bytes, got ${material.length}`
+      );
+    }
     this.#keyPair = secp256k1Context.keyFromPrivate(material);
     this.#publicKey = new Uint8Array(
       this.#keyPair.getPublic().encodeCompressed()
