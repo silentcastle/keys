@@ -9,7 +9,7 @@
     "test": "./node_modules/.bin/jest --forceExit",
     "doc": "./node_modules/.bin/typedoc"
   },
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "dependencies": {
     "@stablelib/ed25519": "^1.0.1",
     "@stablelib/sha256": "^1.0.0",
