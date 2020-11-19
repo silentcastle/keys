@@ -43,6 +43,7 @@
     "pnpm": ">=5.10.4"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "publish-branch": "main"
   }
 }
