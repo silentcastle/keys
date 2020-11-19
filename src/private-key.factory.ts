@@ -15,6 +15,7 @@ export class PrivateKeyFactory {
     kind: AlgorithmKind.ed25519,
     seed: Uint8Array | string
   ): ed25519.PrivateKey;
+  fromSeed(kind: AlgorithmKind, seed: Uint8Array | string): IPrivateKey;
   fromSeed(kind: AlgorithmKind, seed: Uint8Array | string): IPrivateKey {
     const bytes =
       typeof seed === "string" ? uint8arrays.fromString(seed) : seed;
@@ -30,11 +31,15 @@ export class PrivateKeyFactory {
     }
   }
 
-  fromSecret(kind: AlgorithmKind.secp256k1, secret: Uint8Array): secp256k1.PrivateKey;
+  fromSecret(
+    kind: AlgorithmKind.secp256k1,
+    secret: Uint8Array
+  ): secp256k1.PrivateKey;
   fromSecret(
     kind: AlgorithmKind.ed25519,
     secret: Uint8Array
   ): ed25519.PrivateKey;
+  fromSecret(kind: AlgorithmKind, secret: Uint8Array): IPrivateKey;
   fromSecret(kind: AlgorithmKind, secret: Uint8Array): IPrivateKey {
     switch (kind) {
       case AlgorithmKind.ed25519:
