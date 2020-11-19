@@ -2,6 +2,7 @@
   "compilerOptions": {
     "rootDir": "src/",
     "outDir": "dist/",
+    "lib": ["dom"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
