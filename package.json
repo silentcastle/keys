@@ -1,13 +1,14 @@
 {
   "name": "@silentcastle/keys",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Key management",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "./node_modules/.bin/tsc --project tsconfig.json",
     "test": "./node_modules/.bin/jest --forceExit",
-    "doc": "./node_modules/.bin/typedoc"
+    "doc": "./node_modules/.bin/typedoc",
+    "prepublishOnly": "./node_modules/.bin/rimraf dist/ && pnpm run test && pnpm run build"
   },
   "license": "Apache-2.0",
   "files": [
@@ -31,6 +32,7 @@
     "jest": "^26.6.3",
     "lodash": "^4.17.20",
     "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
     "typedoc": "0.17.0-3",
