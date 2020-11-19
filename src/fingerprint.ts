@@ -12,13 +12,16 @@ export enum KEY_PREFIX {
 
 const decoder = new TextDecoder();
 
-export function fingerprint(publicKey: IPublicKey) {
+export function fingerprint(publicKey: IPublicKey): string {
   switch (publicKey.kind) {
-    case AlgorithmKind.ed25519:
-      return multicodec.addPrefix(
+    case AlgorithmKind.ed25519: {
+      const bytes = multicodec.addPrefix(
         Uint8Array.from([KEY_PREFIX.ed25519]),
         publicKey.material
       );
+      const encoded = multibase.encode("base58btc", bytes);
+      return decoder.decode(encoded);
+    }
     case AlgorithmKind.secp256k1: {
       const bytes = multicodec.addPrefix(
         Uint8Array.from([KEY_PREFIX.secp256k1]),
