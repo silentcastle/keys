@@ -1,0 +1,47 @@
+[
+  {
+    "seed": "4f66b355aa7b0980ff901f2295b9c562ac3061be4df86703eb28c612faae6578",
+    "publicKeyJwk": {
+      "crv": "Ed25519",
+      "x": "VDXDwuGKVq91zxU6q7__jLDUq8_C5cuxECgd-1feFTE",
+      "kty": "OKP"
+    },
+    "fingerprint": "z6Mkk7yqnGF3YwTrLpqrW6PGsKci7dNqh1CjnvMbzrMerSeL"
+  },
+  {
+    "seed": "1ebf7fd67372c8c76fd9fec36726efc0b20226d3608b90c608f1af7ae07be830",
+    "publicKeyJwk": {
+      "crv": "Ed25519",
+      "x": "gaDCGxEzGxkfwVMJDsKxxuVeir01I2WBkyLRwXTYsi8",
+      "kty": "OKP"
+    },
+    "fingerprint": "z6MkoBGpA9TtazNKVdoe7dgpA3G1qqq6H9Vziopp3Sz6LHWv"
+  },
+  {
+    "seed": "ef06a7c14fb7ccbd5ebf3b813ae82c7b571074aab4ff20312322b905aa291f4c",
+    "publicKeyJwk": {
+      "crv": "Ed25519",
+      "x": "qidoEVfGLBVhhDrqKmCP5AYYK8nj2LEEPGLEmLD4UX4",
+      "kty": "OKP"
+    },
+    "fingerprint": "z6MkquUCsHbwTmJL6bNX1rrnJdEAVL2NbUfr8KszQowjvFyo"
+  },
+  {
+    "seed": "9393c66fa68d9313240ac7bcb3729de507edeca9a8c406438076c40525058181",
+    "publicKeyJwk": {
+      "crv": "Ed25519",
+      "x": "Ejpd-4v1dJ1SaM8hC9xjqyy4QSAe7QAH1w87jUNFDQs",
+      "kty": "OKP"
+    },
+    "fingerprint": "z6MkfgR1CSArpxkdoHp9XPLqMBroNK4bJmGYar8NDWbtRbX8"
+  },
+  {
+    "seed": "880d83738db5093d2cb5ab12ebb69be7577f07c272c0b2379b5f31c8a9ad4daa",
+    "fingerprint": "z6Mkjm2JGg2wpzyBBRLFrC2RDv7KUxQC4gAkxkvkrBK3yoXD",
+    "publicKeyJwk": {
+      "crv": "Ed25519",
+      "x": "TtdYdFmyz6htTILgILts6-VJVtFCEijr79uRWVsdXXA",
+      "kty": "OKP"
+    }
+  }
+]

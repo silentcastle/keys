@@ -7,3 +7,4 @@ export * from "./fingerprint";
 
 export * as secp256k from "./algorithms/secp256k1";
 export * as ed25519 from "./algorithms/ed25519";
+export * from "./as-jwk";

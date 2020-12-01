@@ -1,0 +1,57 @@
+[
+  {
+    "seed": "4e61bc1918ea6a47ae3307331be7798196a1a8e7cfe4b6e8f7c9a5f36017d929",
+    "fingerprint": "zQ3shU9mxTYfMTLceuppoNM5siowHvw3xBk21r855kwgNHNAX",
+    "publicKeyJwk": {
+      "kty": "EC",
+      "crv": "secp256k1",
+      "x": "ZCkxL14Ix2EDzwOIOJ5D_kNG7lAzIAkO7aFQ82Kru0w",
+      "y": "dvzo1xuPbe7pTelHPEjP_BCF-S-n34NBxU3qC57PdgQ"
+    },
+    "publicKeyBase58": "iCcwcQBt8hPmfj9NzGCpuDZrHAryuByUvCKHTc1F4tJo"
+  },
+  {
+    "seed": "4093566b154c13ecd5587bc81a02570bf79e5bbdf87b01539325bfdbd7a3820b",
+    "fingerprint": "zQ3shoB1GSdwvLCXGqksPpapZ6awvitNNxznBixJQQqNqvEJa",
+    "publicKeyJwk": {
+      "kty": "EC",
+      "crv": "secp256k1",
+      "x": "fsff0VmY6ifssFJn7Mv0CClr82-KrtqxyycOzxjzhLc",
+      "y": "Vb-sjL_qht4S7ujFRF8xJsIm2h1EQQHKXKJfF7mnw3k"
+    },
+    "publicKeyBase58": "23DrFbVUT1ZJPbfBySVwWGzaV58BQgSjeo2Yc7VhihkSr"
+  },
+  {
+    "seed": "f5f4f89838f6968cbc58841321970d3a12b6a73eb3a508c18f55bcd6a9cfe679",
+    "fingerprint": "zQ3shv2aBSoR42QcXHRK8ARMMGxeizSyGdrWb9XRDkD3fT9qu",
+    "publicKeyJwk": {
+      "kty": "EC",
+      "crv": "secp256k1",
+      "x": "5KCr2a8YjyiaBQ8jJV7uJggh-bUcS8F4xZrC1ThQWmQ",
+      "y": "NOGUt_7Z6VDsJjuiiaNt9WMt27GgC5llMF1vtvDdi00"
+    },
+    "publicKeyBase58": "2A5RAbewahmPe3KdhnLUJTNHHLgnJMJU4DbfRSsNYEfzB"
+  },
+  {
+    "seed": "114fb4319e5b151cc06e3ba0a08ccbecdc042203d76e751ce49b16b9609e3fef",
+    "fingerprint": "zQ3sho1cPJPYQ4pJQaCyTUf2SJZs9sr6rDoArmmfhjV6kEbfj",
+    "publicKeyJwk": {
+      "kty": "EC",
+      "crv": "secp256k1",
+      "x": "fF_GRqP3dXvgD-e709A1LrkS52nueC4rES5fN_7hRWY",
+      "y": "UPa1xP5Pt45pyLp9cJjsZZdN7L4K6_NLEJLP8NWYbAE"
+    },
+    "publicKeyBase58": "234TNTF4vkB5XL7J36a9PUyViE5uswF8KqquuS9Rd27p1"
+  },
+  {
+    "seed": "fd70ed0e0d9c32c8c56ea1c02fd4b5ebcabf48943398efdc332cd2641650affe",
+    "fingerprint": "zQ3shdDefcHPSP8pmEzb2f1fr3FbzdZXEoCvyAtaD8jSL1kYB",
+    "publicKeyJwk": {
+      "kty": "EC",
+      "crv": "secp256k1",
+      "x": "6uB0TQytozvHescxo8BaW-oVGbAHYOSoqekrlTzx-uw",
+      "y": "q-6CqIQdx6RRef-O2XnCk2RQP62rpLaZe3nhdAveqzo"
+    },
+    "publicKeyBase58": "sGVem8uy4VbsztucGvnoDfEYyoLGWetSExpQqPmCoGgT"
+  }
+]
