@@ -23,3 +23,15 @@ PrivateKey {
   "kind": "secp256k1",
 }
 `;
+
+exports[`x25519 generate from bytes 1`] = `
+PrivateKey {
+  "kind": "x25519",
+}
+`;
+
+exports[`x25519 generate from string 1`] = `
+PrivateKey {
+  "kind": "x25519",
+}
+`;

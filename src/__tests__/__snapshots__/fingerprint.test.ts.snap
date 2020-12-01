@@ -3,3 +3,5 @@
 exports[`ed25519 1`] = `"z6MkvhaQVvCfyWRovGMqgsKYDTxXsW2u7XQFyCTu8FLJ7JYV"`;
 
 exports[`secp256k1 1`] = `"zQ3shawAiwRa3YbMitAcCyT9PhqPgy4Q4o1va8wzVyz9Lneh7"`;
+
+exports[`x25519 1`] = `"z6LSomTvnsegcfguwDMuHqgcqJx24fQW2PnUX4djEHfKBCRq"`;

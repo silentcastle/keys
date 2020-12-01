@@ -30,3 +30,16 @@ describe("ed25519", () => {
     expect(privateKey).toMatchSnapshot()
   });
 });
+
+describe("x25519", () => {
+  test("generate from bytes", () => {
+    const privateKey = privateKeyFactory.fromSeed(AlgorithmKind.x25519, bytesSeed);
+    expect(privateKey.kind).toEqual(AlgorithmKind.x25519);
+    expect(privateKey).toMatchSnapshot()
+  });
+  test("generate from string", () => {
+    const privateKey = privateKeyFactory.fromSeed(AlgorithmKind.x25519, stringSeed);
+    expect(privateKey.kind).toEqual(AlgorithmKind.x25519);
+    expect(privateKey).toMatchSnapshot()
+  });
+});

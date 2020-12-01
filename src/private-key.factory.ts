@@ -1,6 +1,7 @@
 import * as sha256 from "@stablelib/sha256";
 import * as secp256k1 from "./algorithms/secp256k1";
 import * as ed25519 from "./algorithms/ed25519";
+import * as x25519 from "./algorithms/x25519";
 import { AlgorithmKind } from "./algorithm-kind";
 import { IPrivateKey } from "./private-key";
 import { InvalidKeyKindError } from "./invalid-key-kind.error";
@@ -15,20 +16,16 @@ export class PrivateKeyFactory {
     kind: AlgorithmKind.ed25519,
     seed: Uint8Array | string
   ): ed25519.PrivateKey;
+  fromSeed(
+    kind: AlgorithmKind.x25519,
+    seed: Uint8Array | string
+  ): x25519.PrivateKey;
   fromSeed(kind: AlgorithmKind, seed: Uint8Array | string): IPrivateKey;
   fromSeed(kind: AlgorithmKind, seed: Uint8Array | string): IPrivateKey {
     const bytes =
       typeof seed === "string" ? uint8arrays.fromString(seed) : seed;
     const secret = sha256.hash(bytes);
-    switch (kind) {
-      case AlgorithmKind.ed25519:
-        return this.fromSecret(kind, secret);
-      case AlgorithmKind.secp256k1:
-        return this.fromSecret(kind, secret);
-      /* istanbul ignore next */
-      default:
-        throw new InvalidKeyKindError(kind);
-    }
+    return this.fromSecret(kind, secret);
   }
 
   fromSecret(
@@ -39,6 +36,7 @@ export class PrivateKeyFactory {
     kind: AlgorithmKind.ed25519,
     secret: Uint8Array
   ): ed25519.PrivateKey;
+  fromSecret(kind: AlgorithmKind.x25519, secret: Uint8Array): x25519.PrivateKey;
   fromSecret(kind: AlgorithmKind, secret: Uint8Array): IPrivateKey;
   fromSecret(kind: AlgorithmKind, secret: Uint8Array): IPrivateKey {
     switch (kind) {
@@ -46,6 +44,8 @@ export class PrivateKeyFactory {
         return new ed25519.PrivateKey(secret);
       case AlgorithmKind.secp256k1:
         return new secp256k1.PrivateKey(secret);
+      case AlgorithmKind.x25519:
+        return new x25519.PrivateKey(secret);
       /* istanbul ignore next */
       default:
         throw new InvalidKeyKindError(kind);

@@ -1,6 +1,7 @@
 dependencies:
   '@stablelib/ed25519': 1.0.1
   '@stablelib/sha256': 1.0.0
+  '@stablelib/x25519': 1.0.0
   bn.js: 5.1.3
   elliptic: 6.5.3
   multibase: 3.0.1
@@ -535,6 +536,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-W01QhOw1tWL51Du1c5JZphJs7toRbfra1C2DBlhT0mRHZWGWB1hpFbqiZUFY7QNIMUpmmHLrlZs3YsSCB/giUg==
+  /@stablelib/bytes/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-c9CfJwoZpxub6yicmhkeEpvLLsvsAP76tBAHEXKuEjPzza946U7bgebJJoMl8Q+ZlU2vy9ZoWCXE1uLpi817Pg==
   /@stablelib/ed25519/1.0.1:
     dependencies:
       '@stablelib/random': 1.0.0
@@ -551,6 +556,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-MRigEQCO7xM93nZqW4CbIBjhANGw3jJxGVSUZH3PQ6HWL1IGrFWVDBzIclWxl4l5aRRpqoM+76ellQNdUJPnsA==
+  /@stablelib/keyagreement/1.0.0:
+    dependencies:
+      '@stablelib/bytes': 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-M4f0QhuYGrMCLPoJIKWpC5riJfDivOFZHOAlj1Av44UJSyMzM46gJW0e9khKoTcbU8r8oXebkwlJT70Xm0+kqg==
   /@stablelib/random/1.0.0:
     dependencies:
       '@stablelib/binary': 1.0.0
@@ -578,6 +589,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-0Fd4MQCbEh8OFSO+gG7wBXok7yRC3w+xe/wWM8KNye7EGoHr4BTFZNWV/1xAn2r8/gyFKxPXT8uxXRzDzGq6rg==
+  /@stablelib/x25519/1.0.0:
+    dependencies:
+      '@stablelib/keyagreement': 1.0.0
+      '@stablelib/random': 1.0.0
+      '@stablelib/wipe': 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-sjlOzC8eZJhHTuMZnSTxtawYXbFXZtHm6TbhacvoYmJOG9/3cFX5z1Aw0WZfQvPNSk+8aPrpwuyRMmUO1PW8yw==
   /@types/babel__core/7.1.12:
     dependencies:
       '@babel/parser': 7.12.5
@@ -4243,6 +4262,7 @@ packages:
 specifiers:
   '@stablelib/ed25519': ^1.0.1
   '@stablelib/sha256': ^1.0.0
+  '@stablelib/x25519': ^1.0.0
   '@types/bn.js': ^4.11.6
   '@types/elliptic': ^6.4.12
   '@types/jest': ^26.0.15

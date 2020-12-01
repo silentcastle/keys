@@ -1,5 +1,6 @@
 import * as _ from "lodash";
 import * as ed25519 from "../ed25519";
+import * as x25519 from "../x25519";
 import { AlgorithmKind } from "../../algorithm-kind";
 
 const material = new Uint8Array(_.times(32, () => 1));
@@ -21,6 +22,13 @@ describe("PublicKey", () => {
       publicKey.verify(message, new Uint8Array())
     ).resolves.toBeFalsy();
   });
+
+  test("x25519", async () => {
+    const publicKey = await key.publicKey();
+    const x = await publicKey.x25519();
+    expect(x).toBeInstanceOf(x25519.PublicKey);
+    expect(x).toMatchSnapshot();
+  });
 });
 
 describe("PrivateKey", () => {
@@ -34,5 +42,10 @@ describe("PrivateKey", () => {
   test("sign", async () => {
     const signature = await key.sign(material);
     expect(signature).toMatchSnapshot();
+  });
+  test("x25519", async () => {
+    const x = await key.x25519();
+    expect(x).toBeInstanceOf(x25519.PrivateKey);
+    expect(x).toMatchSnapshot();
   });
 });

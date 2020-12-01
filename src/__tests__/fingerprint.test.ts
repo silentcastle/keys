@@ -15,3 +15,9 @@ test("ed25519", async () => {
   const publicKey = await privateKey.publicKey();
   expect(fingerprint(publicKey)).toMatchSnapshot();
 });
+
+test("x25519", async () => {
+  const privateKey = factory.fromSeed(AlgorithmKind.x25519, "seed");
+  const publicKey = await privateKey.publicKey();
+  expect(fingerprint(publicKey)).toMatchSnapshot();
+});
