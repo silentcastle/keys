@@ -5,7 +5,7 @@ import secp256k1 from "./secp256k1.json";
 import ed25519 from "./ed25519.json";
 import x25519 from "./x25519.json";
 import { fingerprint } from "../fingerprint";
-import { asJWK } from "../as-jwk";
+import { asJWK, fromJWK } from "../jwk";
 
 const keyFactory = new PrivateKeyFactory();
 
@@ -16,6 +16,7 @@ test("secp256k1", async () => {
     const publicKey = await privateKey.publicKey();
     expect(fingerprint(publicKey)).toEqual(vector.fingerprint);
     expect(asJWK(publicKey)).toEqual(vector.publicKeyJwk);
+    expect(fromJWK(asJWK(publicKey))).toEqual(publicKey);
   }
 });
 
@@ -26,6 +27,7 @@ test("ed25519", async () => {
     const publicKey = await privateKey.publicKey();
     expect(fingerprint(publicKey)).toEqual(vector.fingerprint);
     expect(asJWK(publicKey)).toEqual(vector.publicKeyJwk);
+    expect(fromJWK(asJWK(publicKey))).toEqual(publicKey);
   }
 });
 
@@ -36,5 +38,6 @@ test("x25519", async () => {
     const publicKey = await privateKey.publicKey();
     expect(fingerprint(publicKey)).toEqual(vector.fingerprint);
     expect(asJWK(publicKey)).toEqual(vector.publicKeyJwk);
+    expect(fromJWK(asJWK(publicKey))).toEqual(publicKey);
   }
 });
